@@ -2,7 +2,7 @@ Page({
 
   /**
    * 页面的初始数据
-   */ 
+   */
   data: {
     typeList:[],
     // 表示当前导航ID是多少,默认显示热点文章
@@ -31,7 +31,7 @@ Page({
     wx.request({
       url: 'http://localhost/toutiao/getList.php?typeId='+id,
       success(res){
-        // console.log(res);
+        console.log(res);
         var tempList=[];
         // 可以循环
         res.data.forEach(item=>{
@@ -49,6 +49,22 @@ Page({
         });
       }
     })
+  },
+  showDetail(e){
+    // 获取文章ID
+    var id=e.currentTarget.dataset.newsid;
+    console.log(id);
+    // 
+    wx.navigateTo({
+      // 点击当前文章，跳转到详情页，并且把单篇文章的id传递到该详情页
+      url: '/pages/detail/detail?newsid='+id
+    })
+    // wx.request({
+    //   url: 'http://localhost/toutiao/getDetail.php?newsId='+id,
+    //   success(res){
+    //     console.log(res);
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载

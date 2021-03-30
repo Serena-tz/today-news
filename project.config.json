@@ -28,17 +28,15 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true
+    "packNpmRelationList": []
   },
   "compileType": "miniprogram",
   "libVersion": "2.14.0",
-  "appid": "wx8ea24767ca600917",
+  "appid": "wx55e9eb9a4c1f6634",
   "projectname": "todaynews",
   "debugOptions": {
     "hidedInDevtools": []
@@ -49,21 +47,27 @@
   "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
+      "current": -1,
       "list": []
     },
     "conversation": {
+      "current": -1,
       "list": []
     },
     "game": {
+      "current": -1,
       "list": []
     },
     "plugin": {
+      "current": -1,
       "list": []
     },
     "gamePlugin": {
+      "current": -1,
       "list": []
     },
     "miniprogram": {
+      "current": -1,
       "list": []
     }
   }

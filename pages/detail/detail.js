@@ -5,13 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 写个接收详情页的数据属性
+    content:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // onLoad的options可以接收来自其他页面的数据（通过url传递过来的数据）
+    console.log(options);
+    var _this=this;
+    // 在这里去获取详情页的数据
+    wx.request({
+      url: 'http://localhost/toutiao/getDetail.php?newsId='+options.newsid,
+      success(res){
+        console.log(res);
+        _this.setData({
+          content:res.data[0]
+        });
+      }
+    })
 
   },
 

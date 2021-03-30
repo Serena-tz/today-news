@@ -20,7 +20,7 @@
 
 <!-- 内容区域 
   文章是用何种样式取决于img_type
-  0, 表示无图
+  0,表示无图
   1，表示1图
   3，表示3图
 -->
@@ -28,9 +28,9 @@
 <!-- {{newsList}} -->
   <!--3张图的样式 -->
 <view class="post-wrapper">
-    <block wx:for="{{newsList}}">
+    <block wx:for="{{newsList}}" >
       <!-- 判断当前文章类型是什么，再决定用何种样式 -->
-    <view class="post-list" wx:if="{{item.img_type==3}}">
+    <view class="post-list" wx:if="{{item.img_type==3}}" bindtap="showDetail" data-newsid="{{item.id}}">
 <!-- 注意：在小程序中是没有h1~h6这种标签的 -->
     <view class="h2-title">{{item.title}}</view>
     <view class="pic-wrapper">
@@ -47,7 +47,7 @@
     </view>
   </view>
 <!-- 1张图 -->
-  <view class="post-list"  wx:if="{{item.img_type==1}}">
+  <view class="post-list"  wx:if="{{item.img_type==1}}" bindtap="showDetail" data-newsid="{{item.id}}">
 <!-- 注意：在小程序中是没有h1~h6这种标签的 -->
   <view class="title-wrapper">
     <view class="h2-title">{{item.title}}</view>
@@ -63,7 +63,7 @@
     </view>
   </view>  
 <!-- 0张图 -->
-    <view class="post-list"  wx:if="{{item.img_type==0}}">
+    <view class="post-list"  wx:if="{{item.img_type==0}}" bindtap="showDetail" data-newsid="{{item.id}}">
   <!-- 注意：在小程序中是没有h1~h6这种标签的 -->
     <view class="h2-title">{{item.title}}</view>
     <view class="post-foot">
