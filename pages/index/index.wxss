@@ -1,0 +1,50 @@
+/* 导航样式 */
+.nav{
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  width: 100%;
+}
+.nav-item{
+  display: inline-block;
+  margin: 20rpx 30rpx;
+}
+.on{
+  color: red;
+}
+
+/* 文章列表 */
+.post-list{
+  margin: 15rpx 20rpx;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20rpx;
+}
+/* 文章标题 */
+.h2-title{
+  font-size: 18px;
+}
+.pic-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+.cover{
+  width: 220rpx;
+  height: 150rpx;
+}
+.post-foot{
+  font-size: 14px;
+  color: gray;
+  margin-top: 20rpx;
+}
+.author{
+  margin-right: 20rpx;
+}
+/* 1图模式 */
+.title-wrapper{
+  display: flex;
+
+}
+.title-wrapper h2{
+  flex: 2;
+}

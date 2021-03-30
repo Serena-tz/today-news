@@ -1,0 +1,77 @@
+<scroll-view scroll-x="true" class="nav">
+  <view 
+    wx:for="{{typeList}}" 
+    wx:key="item.id"
+    class="nav-item {{item.id===id?'on':''}}"
+    data-id="{{item.id}}"
+    bindtap="changeNav"
+    >{{item.name}}</view>
+  <!-- <view class="nav-item">推荐</view>
+  <view class="nav-item">资讯</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view>
+  <view class="nav-item">热点</view> -->
+</scroll-view>
+
+<!-- 内容区域 
+  文章是用何种样式取决于img_type
+  0, 表示无图
+  1，表示1图
+  3，表示3图
+-->
+<view class="wrapper">
+<!-- {{newsList}} -->
+  <!--3张图的样式 -->
+<view class="post-wrapper">
+    <block wx:for="{{newsList}}">
+      <!-- 判断当前文章类型是什么，再决定用何种样式 -->
+    <view class="post-list" wx:if="{{item.img_type==3}}">
+<!-- 注意：在小程序中是没有h1~h6这种标签的 -->
+    <view class="h2-title">{{item.title}}</view>
+    <view class="pic-wrapper">
+        <image 
+        wx:for="{{item.cover_img}}" 
+        wx:for-item="t"
+        class='cover' src="{{t}}"></image>
+        <!-- <image class='cover' src="../cars/XT402.png"></image>
+        <image class='cover' src="../cars/XT403.png"></image> -->
+    </view>
+    <view class="post-foot">
+      <text class="author">作者：{{item.publisher}}</text>
+      <text>{{item.create_time}}</text>
+    </view>
+  </view>
+<!-- 1张图 -->
+  <view class="post-list"  wx:if="{{item.img_type==1}}">
+<!-- 注意：在小程序中是没有h1~h6这种标签的 -->
+  <view class="title-wrapper">
+    <view class="h2-title">{{item.title}}</view>
+      <image 
+        wx:for="{{item.cover_img}}" 
+        wx:for-item="t"
+        class='cover' src="{{t}}"></image>
+
+  </view>
+    <view class="post-foot">
+      <text class="author">作者：{{item.publisher}}</text>
+      <text>{{item.create_time}}</text>
+    </view>
+  </view>  
+<!-- 0张图 -->
+    <view class="post-list"  wx:if="{{item.img_type==0}}">
+  <!-- 注意：在小程序中是没有h1~h6这种标签的 -->
+    <view class="h2-title">{{item.title}}</view>
+    <view class="post-foot">
+      <text class="author">作者：{{item.publisher}}</text>
+      <text>{{item.create_time}}</text>
+    </view>
+  </view> 
+</block>  
+</view>
+
+</view>

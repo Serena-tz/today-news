@@ -1,0 +1,43 @@
+/* pages/detail/detail.wxss */
+.container{
+  padding: 20rpx 30rpx;
+}
+.h1-title{
+  font-size: 22px;
+  margin-bottom: 20rpx;
+}
+/* 文章作者信息 */
+.post-title-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.author-face{
+  width: 98rpx;
+  height: 98rpx;
+  border-radius: 50%;
+}
+.post-meta-wrapper{
+   margin-left: 20rpx;
+   margin-bottom: 30rpx;
+}
+.post-meta-author{
+  margin-bottom: 10rpx;
+
+}
+.post-meta-way{
+  font-size: 12px;
+  border: 1px solid #999;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  margin-right: 20rpx;
+  color: gray;
+}
+.post-meta-time{
+  font-size: 14px;
+  color: gray;
+}
+/* 文章详情 */
+.post-detail {
+  line-height: 1.8;
+}

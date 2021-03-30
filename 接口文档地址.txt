@@ -1,0 +1,25 @@
+1、 http://localhost/toutiao/getType.php   
+    作用：返回导航分类的json文件
+    说明：无参数，访问该地址即可
+
+2、 http://localhost/toutiao/getList.php?typeId=1002  
+    作用：返回指定分类下的所有列表文章的json数据
+    参数：typeId（必填）
+    参数值：（见数据库type表的ID字段）
+        1001-热点
+        1002-推荐
+        1003-资讯
+        2001-娱乐
+        2002-综艺
+        3001-历史
+        4001-汽车
+        4002-科技
+
+3、 http://localhost/toutiao/getDetail.php?newsId=news-1002
+    作用：返回指定文章详情的json数据
+    参数：newsId（必填）
+    参数值：（见数据库news表的ID字段）
+        比如：
+            news-1001
+            news-1002
+    说明：通过外键typeId可以归档所有的分类文章

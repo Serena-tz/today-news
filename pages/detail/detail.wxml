@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+<!-- 标题 -->
+<view class="h1-title">这里是一条很长的新闻标题，够长了吧</view>
+<!-- 文章作者信息等 -->
+<view class="post-title-wrapper">
+  <image class="author-face" src="https://www.disanping.com/wp-content/uploads/2020/03/tx-26x26.jpg"></image>
+  <view class="post-meta-wrapper">
+    <view class="post-meta-author">
+      张三
+    </view>
+    <view class="post-meta-date">
+      <text class="post-meta-way">原创</text>
+      <text class="post-meta-time">发布时间：2020-3-26 22:02:25</text>
+    </view>
+  </view>
+
+</view>
+<!-- 文章详情，可用富文本 -->
+<rich-text class="post-detail" nodes="<p>小伙子捡到手机通过店家还给失主</p><p>一读者：前两天晚上，有个小伙子捡到了一台手机，转交到我们店里了，说是在外面捡到的，“看到你们这边有店就交给你们了”，然后他转身就走了。</p><p>过了几分钟，失主通过朋友的微信打了语音电话过来。我们店员向其核对了一些相关问题，失主就过来拿走了。那个小哥也不知道叫啥，就叫他“雷锋”好了。社会需要这种正能量的好人。</p>">
+
+</rich-text>
+
+</view>
